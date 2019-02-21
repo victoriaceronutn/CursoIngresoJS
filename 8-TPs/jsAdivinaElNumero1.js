@@ -12,15 +12,40 @@ var contadorIntentos;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
-	
-
-}
+  //Genero el número RANDOM entre 1 y 100
+  
+  numeroSecreto=Math.floor(Math.random()*100)+1;
+  console.log(numeroSecreto);
+  contadorIntentos=0;
+}		//alert(numeroSecreto );
 
 function verificar()
 {
-	
-	
+  var numeroIngreso;
+  contadorIntentos=contadorIntentos+1;
+  numeroIngreso=numero.value;
+  console.log(numeroIngreso);
+  if (numeroIngreso==numeroSecreto)
+  {
+    if (contadorIntentos<4)
+    {
+      
+    }
+    alert("genio");
+  }else
+  {
+    if (numeroIngreso>numeroSecreto)
+    {
+      alert("se paso");
+    }else
+    {
+      if (numeroIngreso<numeroSecreto)
+      {
+        alert("te falta");
+      }else
+      {
+
+      }
+    }
+  }
 }
