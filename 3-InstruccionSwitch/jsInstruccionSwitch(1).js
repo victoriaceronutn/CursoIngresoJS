@@ -7,7 +7,6 @@ var Marzo;
 var Julio;
 var Diciembre;
 var mensaje;
-
 switch("mesDelAño")
 {
     case "Enero":
@@ -27,7 +26,6 @@ switch("mesDelAño")
       break;
 
       alert(mensaje);
-
 }
 
 
