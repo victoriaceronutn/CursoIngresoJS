@@ -10,5 +10,117 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    var marca;
+    var cantidad;
+    var totalBruto;
+    var porcentajeDescuento;
+    var totalConDescuento;
+    var IIBB=0;
+
+    cantidad=document.getElementById("Cantidad").value;
+    marca=document.getElementById("Marca").value;
+
+    cantidad=parseInt(cantidad);
+     
+    totalBruto=cantidad*35;
+
+           switch(cantidad)
+           {
+               case 5:
+               if(marca=="ArgentinaLuz")
+               {
+                   porcentajeDescuento=0.4;
+               }
+               else
+               {
+                   porcentajeDescuento=0.3;
+               }
+            }
+               break;
+               case 4:
+               if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+               {
+                   porcentajeDescuento=0.25;
+                }
+                else
+                {
+                    porcentajeDescuento=0.20; 
+                }
+                break;
+                case 3:
+                if (marca=="ArgentinaLuz")
+                {
+                    porcentajeDescuento=0.15; 
+                }
+                else
+                {
+
+                }
+
+
+    
+
+                
+    if (cantidad>=36)
+    {
+        porcentajeDescuento=0.5;
+    }
+    else
+    {
+        if (cantidad==5)
+        {
+            if (marca=="ArgentinaLuz")
+            {
+                porcentajeDescuento=0.4;
+            }
+            else
+            {
+                porcentajeDescuento=0.3;
+            }
+        }
+        else
+        {
+            if (cantidad==4)
+            {
+                if (marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+                {
+                    porcentajeDescuento=0.25;
+                }
+                else
+                {
+                    porcentajeDescuento=0.20;
+                }    
+            }
+            else
+            {
+                if (cantidad==3)
+                {
+                    if (marca=="ArgentinaLuz")
+                    {
+                        porcentajeDescuento=0.15;
+                    }
+                    else
+                    {
+                        if (marca=="FelipeLamparas")
+                        {
+                            porcentajeDescuento=0.1;
+                        }
+                        else
+                        {
+                            porcentajeDescuento=0.05;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    totalConDescuento=totalBruto-(totalBruto*porcentajeDescuento);
+    
+    if(totalConDescuento>120)
+    {
+        IIBB=(totalConDescuento*0,1);
+        alert( "Usted pago" + IIBB + "de IIBB");
+    }
+    document.getElementById("precioDescuento").value = totalConDescuento+IIBB;
+
 }
