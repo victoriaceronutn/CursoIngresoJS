@@ -5,15 +5,12 @@ function mostrar()
     var largo;
     var perimetro;
 
-    ancho=2;
-    largo=4;
+    perimetro=(ancho*2)+(largo*2);
     perimetro=ancho+largo;
 
-    parseInt(ancho+largo);
-
-    prompt("ancho");
-    prompt("largo");
-
- alert(" el perimetro es " + (2+4));
+    prompt(ancho);
+    prompt(largo);
+    
+    alert(" el perimetro es " + perimetro);
 
 }

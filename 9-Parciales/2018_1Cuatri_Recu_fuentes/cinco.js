@@ -1,7 +1,41 @@
 function mostrar()
 {
+    var lunes;
+    var martes;
+    var miercoles;
+    var jueves;
+    var viernes;
+    var sabado;
+    var domingo;
+    var semana = lunes; martes, miercoles, jueves, viernes ;
+    var findesemana = sabado; domingo ;
+    
 
-    var importe;
+
+    switch ("dia de la semana") {
+        case 1:
+            if (semana)
+            {
+                prompt("un dia de la semana");
+                alert("a trabajar");
+            }
+            break;
+
+        case 2:
+            if(findesemana)
+            {
+                prompt("un dia de la semana");
+                alert("buen finde");
+            }
+    
+        default:
+            break;
+        }    
+    }
+
+    
+
+    /*var importe;
     var mayor;
     var descuento;
     var mensaje;
@@ -34,7 +68,7 @@ function mostrar()
             else
             {
             }
-            alert("importe"+prompt);
+            alert("importe"+prompt);*/
 
 }
 
