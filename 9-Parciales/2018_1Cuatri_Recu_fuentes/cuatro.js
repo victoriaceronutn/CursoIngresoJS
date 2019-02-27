@@ -10,7 +10,7 @@ function mostrar()
     if (resultado==resultado)
     {
         /*alert(resultado);*/
-        prompt(resultado);
+        prompt("resultado");
     }
     else
     {
@@ -18,14 +18,14 @@ function mostrar()
         if (numero1>numero2)
         {
             /*alert(numero1 / numero2);*/
-            prompt(numero1 / numero2);
+            prompt("numero1 / numero2");
         }
         else
         {
             if (numero1<numero2)
             {
                 /*alert(numero1+numero2);*/
-                prompt(numero1+numero2);
+                prompt("numero1+numero2");
             }
             else
             {

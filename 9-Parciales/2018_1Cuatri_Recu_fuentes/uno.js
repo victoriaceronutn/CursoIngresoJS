@@ -5,11 +5,10 @@ function mostrar()
     var largo;
     var perimetro;
 
-    perimetro=(ancho*2)+(largo*2);
-    perimetro=ancho+largo;
+    ancho=prompt("ancho");
+    largo=prompt("largo");
 
-    prompt(ancho);
-    prompt(largo);
+    perimetro=ancho*2+largo*2;
     
     alert(" el perimetro es " + perimetro);
 

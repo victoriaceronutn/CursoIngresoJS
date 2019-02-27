@@ -1,29 +1,36 @@
 function mostrar()
 {
-    var hora
+    var hora;
+    var temprano;
+    var dia;
+
+    temprano=6, 7, 8, 9, 10, 11;
+    dia=12, 13, 14, 15, 16, 17, 18, 19; 
+    noche=20, 21, 22, 23, 24;
+
     hora=document.getElementById("laHora").value;
     
 
     switch (hora)
     {
         case 1:
-            if(hora==6-11)
+            if(hora==temprano)
             {
-                alert("es de mañana");
+                alert("es de mañana"+laHora);
             }
             break;
 
         case 2:
-            if(hora==12-19)
+            if(hora==dia)
             {
-                alert("es de tarde");
+                alert("es de tarde"+laHora);
             }
             break;
 
         case 3:
-            if(hora==20-24)
+            if(hora==noche)
             {
-                alert("es de noche");
+                alert("es de noche"+laHora);
             }
             break;
             default:    

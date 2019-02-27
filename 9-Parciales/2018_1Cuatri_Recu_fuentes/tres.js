@@ -1,30 +1,25 @@
 function mostrar()
 {
 var precio;
-var propina;
-var amigos;
-var cadauno;
 var descuento;
-var resultado;
+var preciofinal;
 
+precio=document.getElementById("precio");
+descuento=document.getElementById("descuento");
+preciofinal=document.getElementById("elPrecioFinal");
 
-propina=descuento+((descuento*10)/100);
-
-descuento=precio-((precio*25)/100);
-
-cadauno=amigos/propina;
-
-resultado=cadauno;
-
-prompt("precio"+precio);
+precio=prompt("precio");
 precio=parseInt(precio);
 
-prompt("amigos"+amigos);
-amigos=parseInt(amigos);
+descuento=prompt("descuento");
+descuento=parseInt(descuento);
 
-preciofinal=document.getElementById("elPrecioFinal").value;
+descuento=precio-(precio*25/100);
 
-alert(" cada uno en total debe pagar " + resultado );
+preciofinal=precio-(precio*descuento/100);
+
+
+alert(preciofinal);
 
 
 }

@@ -7,24 +7,21 @@ function mostrar()
     var viernes;
     var sabado;
     var domingo;
-    var semana = lunes; martes, miercoles, jueves, viernes ;
-    var findesemana = sabado; domingo ;
-    
+   
+
 
 
     switch ("dia de la semana") {
         case 1:
-            if (semana)
+            if (lunes&&martes&&miercoles&&jueves&&viernes)
             {
-                prompt("un dia de la semana");
                 alert("a trabajar");
             }
             break;
 
         case 2:
-            if(findesemana)
+            if(sabado&&domingo)
             {
-                prompt("un dia de la semana");
                 alert("buen finde");
             }
     
