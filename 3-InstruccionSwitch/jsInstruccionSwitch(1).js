@@ -1,32 +1,29 @@
 function mostrar()
 {
 //tomo la edad  
-var mesDelAño = document.getElementById('mes').value;
-var Enero;
-var Marzo;
-var Julio;
-var Diciembre;
-var mensaje;
-switch("mesDelAño")
+var mesDelAño 
+mesDelAño = document.getElementById('mes').value;
+
+switch(mesDelAño)
 {
     case "Enero":
-      mensaje="que comiences bien el año!!!";
+      mesDelAño="que comiences bien el año!!!";
       break;
     
     case "Marzo":
-      mensaje="a clases!!!";
+      mesDelAño="a clases!!!";
       break;
 
     case "Julio":
-      mensaje="se vienen las vacaciones!!!";
+      mesDelAño="se vienen las vacaciones!!!";
       break;
       
     case "Diciembre":
-      mensaje="Felices fiestas!!!";
+      mesDelAño="Felices fiestas!!!";
       break;
-
-      alert(mensaje);
+      default:
+      mesDelAño="Disfruta siempre que pueda";
 }
-
+alert(mesDelAño);
 
 }//FIN DE LA FUNCIÓN

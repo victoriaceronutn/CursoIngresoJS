@@ -4,38 +4,51 @@ function mostrar()
 	var contador=0;
 	// declarar variables
 	var numero;
-	var maximo;
-	var minimo;
-	var respuesta='si';
-	var cantidad=0;
+	var numeroMaximo;
+	var numeroMinimo;
+	var respuesta;
+	var cantidad;
+	var numeroIngresado;
+	var bandera;
+
+	respuesta="si";
+	cantidad=0;
+	numeroMaximo=-9999;
+	numeroMinimo=999;
+	bandera="es la primera";
+
 
 	while(respuesta!='no')
 	{
-		numero=prompt("Ingrese un numero");
-		if (cantidad==0)
+		numeroIngresado=prompt("ingrese numero");
+		numeroIngresado=parseInt(numeroIngresado);
+
+		if(bandera=="es la primera")
 		{
-			maximo=numero;
-			minimo=numero;
-		}
-		else
+			numeroMaximo=numeroIngresado;
+			numeroMinimo=numeroIngresado;
+			//bandera="lalala";
+		}else
 		{
-			if(numero>maximo)
+			/*numero=prompt("Ingrese un numero");*/
+		
+			if (numeroIngresado>numeroMaximo)
 			{
-				maximo=numero;
+				numeroMaximo=numeroIngresado;
 			}
-			if(numero>minimo)
+			if (numeroIngresado<numeroMinimo)
 			{
-				minimo=numero;
+				numeroMinimo=numeroIngresado;
 			}
 		}
+
+		respuesta=prompt("ingrese no para salir");	
 	}
+	/*console.log("el maximo es"+numeroMaximo);
+	console.log("el minimo es"+numeroMinimo);*/
 
-	cantidad++;
-
-	respuesta=prompt("Desea ingresar otro numero?");
-
-	document.getElementById("minimo").value;
-	document.getElementById("maximo").value;
+	document.getElementById("numeroMaximo").value;
+	document.getElementById("numeroMinimo").value;
 
 	
 }//FIN DE LA FUNCIÓN
