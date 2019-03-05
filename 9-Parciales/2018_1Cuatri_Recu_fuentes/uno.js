@@ -5,7 +5,7 @@ function mostrar()
     var largo;
     var perimetro;
 
-    ancho=prompt("ancho");
+    ancho=prompt("ancho");/*mensaje*/
     largo=prompt("largo");
 
     perimetro=ancho*2+largo*2;

@@ -13,6 +13,6 @@ function mostrar()
 
     perimetro=2*(ancho+largo);
 
-    alert(" su perimetro va a ser " + perimetro);
+    alert(" su perimetro es " + perimetro);
 
 }

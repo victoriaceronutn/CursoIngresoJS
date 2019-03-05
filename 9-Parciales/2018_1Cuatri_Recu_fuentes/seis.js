@@ -1,38 +1,45 @@
 function mostrar()
 {
     var hora;
-    var temprano;
-    var dia;
-
-    temprano=6, 7, 8, 9, 10, 11;
-    dia=12, 13, 14, 15, 16, 17, 18, 19; 
-    noche=20, 21, 22, 23, 24;
-
     hora=document.getElementById("laHora").value;
-    
 
-    switch (hora)
+    var flag;
+
+    hora=parseInt(hora);
+
+    switch(hora)
     {
-        case 1:
-            if(hora==temprano)
-            {
-                alert("es de mañana"+laHora);
-            }
+        case 6:
+        case 7: 
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+            alert("Es de mañana");
             break;
-
-        case 2:
-            if(hora==dia)
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
+        alert("Es de tarde");
+        break;
+        default:
+        
+        if(hora>=20 && hora<=24 || hora>=1 && hora<=5)
+        {
+            if(hora>5)
             {
-                alert("es de tarde"+laHora);
+                alert("A dormir");
             }
-            break;
-
-        case 3:
-            if(hora==noche)
-            {
-                alert("es de noche"+laHora);
-            }
-            break;
-            default:    
+            alert("Es de noche");    
+        }
+        else
+        {
+            alert("No es valida la hora");
+        }   
     }
 }

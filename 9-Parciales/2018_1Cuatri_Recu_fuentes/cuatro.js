@@ -5,12 +5,16 @@ function mostrar()
     
     var resultado;
 
-    resultado= numero1 + numero2;
+    numero1=prompt("Ingrese un numero");
+    numero2=prompt("Ingrese otro numero");
+
+    numero1=parseInt(numero1);
+    numero2=parseInt(numero2);
     
-    if (resultado==resultado)
+    if (numero1==numero2)
     {
         /*alert(resultado);*/
-        prompt("resultado");
+        alert(numero1 + "y" + numero2);
     }
     else
     {
@@ -18,22 +22,22 @@ function mostrar()
         if (numero1>numero2)
         {
             /*alert(numero1 / numero2);*/
-            prompt("numero1 / numero2");
+            alert(numero1 / numero2);
         }
         else
         {
             if (numero1<numero2)
             {
                 /*alert(numero1+numero2);*/
-                prompt("numero1+numero2");
+                alert(numero1 + numero2);
             }
-            else
-            {
-                if (resultado<=50)
+                suma=numero1+numero2;
+                alert(suma);
+
+                if (suma<=50)
                 {
-                    alert("la suma es " + resultado + "y es menor a 50");
+                    alert(" la suma es " + suma + " y es menor a 50 ");
                 }
-            }
         }
     }
 }

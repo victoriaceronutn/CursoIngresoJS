@@ -16,7 +16,7 @@ function mostrar()
 
 /*do while=hace y despues evalua. si no lo vimos, no se usa.*/ 
 
-    while(respuesta==true) /*evalua y despues hace. tiene que estar la variacion de datos*/
+    while(respuesta==true) /*evalua y despues hace.*/
     {
         marca=prompt("Ingrese marca");
         peso=prompt("Ingrese peso");
@@ -51,7 +51,7 @@ function mostrar()
 
         respuesta=confirm("Desea ingresar otro producto?");
     }
-    promedio=acumuladorPeso/contadorPeso;
+    promedioPeso=acumuladorPeso/contadorPeso;
     document.write("Cantidad de temperaturas pares " + contadorTemperaturaPar);
     document.write("El producto maximo es: " + maxMarca );
     document.write("cantidad de productos a menos de oº" + contadorTemperaturaMenosCero);

@@ -15,6 +15,7 @@ function mostrar()
         case 10:
         case 11:
            alert("Es de mañana");
+           break;
         case 12:
         case 13:
         case 14:

@@ -1,33 +1,26 @@
 function mostrar()
 {
-    var lunes;
-    var martes;
-    var miercoles;
-    var jueves;
-    var viernes;
-    var sabado;
-    var domingo;
-   
+    var dia;
 
+    dia=prompt("Ingrese un dia");
 
+    switch (dia) 
+    {
+        case "sabado":
+        case "domingo":
+        alert ("Buen finde");
+        break;
 
-    switch ("dia de la semana") {
-        case 1:
-            if (lunes&&martes&&miercoles&&jueves&&viernes)
-            {
-                alert("a trabajar");
-            }
-            break;
-
-        case 2:
-            if(sabado&&domingo)
-            {
-                alert("buen finde");
-            }
-    
+        case "lunes":
+        case "martes":
+        case "miercoles":
+        case "jueves":
+        case "viernes":
+        alert("A trabajar");
+        break;
         default:
-            break;
-        }    
+        alert("No ingreso un dia valido");
+        
     }
 
     
