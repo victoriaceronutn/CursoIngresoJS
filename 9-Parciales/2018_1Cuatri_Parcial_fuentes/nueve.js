@@ -13,6 +13,9 @@ function mostrar()
     var contadorPeso=0;
     var acumuladorPeso=0;
     var respuesta=true;
+    var minMarca;
+    var flagPesoMinimo;
+
 
 /*do while=hace y despues evalua. si no lo vimos, no se usa.*/ 
 
@@ -26,7 +29,7 @@ function mostrar()
             peso=prompt("Reingrese peso");
         }
         temperatura=prompt("Ingrese temperatura");
-        while(temperatura<30 || temperatura>30)
+        while(temperatura< -30 || temperatura>30)
         {
             temperatura=prompt("Reingrese temperatura");
         }
@@ -44,6 +47,9 @@ function mostrar()
         }
         if(flagPesoMaximo==false || peso<minPeso)
         {
+            minMarca=marca;
+            minPeso=peso;
+            flagPesoMinimo=true;
 
         }
         contadorPeso++;
@@ -55,7 +61,7 @@ function mostrar()
     document.write("Cantidad de temperaturas pares " + contadorTemperaturaPar);
     document.write("El producto maximo es: " + maxMarca );
     document.write("cantidad de productos a menos de oº" + contadorTemperaturaMenosCero);
-    document.write("el promedio es: " + promedio);
+    document.write("el promedio es: " + promedioPeso);
     document.write("el maximo peso es: " + maxPeso + " y el minimo peso es: "+ minPeso);
 
 }

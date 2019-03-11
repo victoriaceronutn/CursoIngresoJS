@@ -2,7 +2,7 @@ function mostrar()
 {
     var hora;
     hora=document.getElementById("laHora").value;
-    var flag;
+    
 
     hora=parseInt(hora);
 

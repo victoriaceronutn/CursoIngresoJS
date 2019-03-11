@@ -1,15 +1,91 @@
 function mostrar()
 {
-    var nota;
-    var sexo;
-    var notaBaja;
-    var contadorVaronesMas6 = 0;
-    var acumuladorNotas = 0;
-    var i;
-    var promedio;
+    var altura =0;
+    var sexo =0;
+    var contador =0;
+    var promedioAlturas;
+    var alturaMinima =0;
+    var sexoMin =0;
+    var alturaMaxMujeres =0;
+    var sexoMujer =0;
+    var sumaAltura =0;
+    var contadorAltura =0;
+    var cantidadMujeres =0;
+    
+
+    while(contador<5)
+    {
+        altura=parseFloat(prompt("Ingrese una altura en cm"));
+        while(altura<0 || altura>250 )
+        {
+            prompt("ERROR, vuelva a ingresar");
+        }
+
+        sexo=prompt("Ingrese un sexo ");
+        while(sexo != "f" && sexo != "m")
+        {
+            prompt("ERROR, vuelva a ingresar");
+        }
+        if(contador==0 || altura<alturaMinima)
+        {
+            alturaMinima=altura;
+            sexoMin=sexo;
+        }
+        else
+        {
+            if(altura<alturaMinima)
+            {
+                alturaMinima=altura;
+                sexoMin=sexo;
+            }
+        }
+        if(contador==0 || altura>alturaMaxMujeres)
+        {
+            alturaMaxMujeres=altura;
+            sexoMujer= sexo;
+        }
+        else
+        {
+            if(altura>alturaMaxMujeres)
+            {
+                alturaMaxMujeres=altura;
+                sexoMujer=sexo;
+            }
+        }
+        if(alturaMaxMujeres=>190)
+        {
+            cantidadMujeres++;
+        }
+
+        contador++;
+        sumaAltura++;
+        contadorAltura++;
+        
+    }
+    promedioAlturas=sumaAltura/contadorAltura;
+
+    alert("El promedio de las alturas totales " + promedioAlturas);
+    alert("La altura mas baja" + alturaMinima + " y el sexo es " + sexoMin);
+    alert("La cantidad de mujeres que su altura supere los 190 centimetros es de " + cantidadMujeres);
+
+
+
+
+
+
+
+    /*var nota =0;
+    var sexo =0;
+    var notaMin =0;
+    var sumaNotas =0;
+    var sexoNotaMin =0;
+    var contadorVarones = 0;
+    var contadorDeNotas = 0;
+    var contador =0;
+    var promedioNotas;
 
     
-    for(i = 1; i <=6; i++)
+    while(contador<5)
     {
         nota = parseInt(prompt("Ingrese nota: "));
         while(nota < 0 || nota > 10 || isNaN(nota))
@@ -22,27 +98,32 @@ function mostrar()
         {
             sexo= prompt("Error, reingrese sexo: ");
         }  
-        if(i==1)
+        if(contador==0 || nota<notaMin)
         {
-            notaBaja=nota;
+            notaMin=nota;
+            sexoNotaMin=sexo;
         }
-        if(nota <= notaBaja)
+        else
         {
-            notaBaja=nota;
+            if(nota<notaMin)
+            {
+                notaMin=nota;
+                sexoNotaMin=sexo;
+            }
         }
-        if(sexo=="m" && nota >= 6)
+        if( nota>=6 && sexo=="m" )
         {
-            contadorVaronesMas6++;
+            contadorVarones++;
         }
 
-        acumuladorNotas+= nota;
-        promedio=acumuladorNotas/i;
+        contador++;
+        contadorDeNotas++;
+        sumaNotas++;
     }    
 
-    
-
-alert("El promedio final de las notas fue de " + promedio + " puntos ");
-alert("La nota mas baja fue de " + notaBaja + " puntos " );
-alert("La cantidad de varones con notas mayores o iguales a 6 fue de " + contadorVaronesMas6 + " alumnos ");
+promedioNotas=sumaNotas/contadorDeNotas;    
+alert("El promedio final de las notas fue de " + promedioNotas + " puntos ");
+alert("La nota mas baja fue de " + notaMin + " puntos " );
+alert("La cantidad de varones con notas mayores o iguales a 6 fue de " + contadorVarones + " alumnos ");*/
 
 }
