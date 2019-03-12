@@ -28,7 +28,7 @@ function mostrar()
             numero=parseInt(prompt("Reingrese un numero: "));
         }
         
-        if(numero % 2 == 0)
+        if(numero %2 == 0)
         {
             contadorPares++;
         }

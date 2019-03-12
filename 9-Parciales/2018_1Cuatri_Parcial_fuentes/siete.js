@@ -17,15 +17,18 @@ function mostrar()
     var contadorNegativos =0;
     var contadorPositivos =0;
     var respuesta ="si";
+    var acumulador;
 
-
-    while(respuesta!= "no"  && contador<5)
+    contador=0;
+    while(contador<5)
     {
         altura=parseFloat(prompt("Ingrese una altura en cm"));
+        contador++;
         while(altura<0 || altura>250 )
         {
             altura=prompt("ERROR, vuelva a ingresar");
         }
+
 
         sexo=prompt("Ingrese un sexo ");
         while(sexo != "f" && sexo != "m")
@@ -33,57 +36,29 @@ function mostrar()
             sexo=prompt("ERROR, vuelva a ingresar");
         }
 
-
-        if(altura>0)
-        {
-            contadorPositivos++;
-            sumaPositivos++;
-        }
-        else
-        {
-            contadorNegativos++;
-            sumaNegativos++;
-        }
-        if(contador==0)
+        console.log(sexo);
+        console.log(altura);
+        if(contador==0 || altura<alturaMinima)
         {
             alturaMinima=altura;
             sexoMin=sexo;
-            alturaMaxMujeres=altura;
-            sexoMax=sexo;
-        }
-        else
-        {
-            if(altura<alturaMinima)
-            {
-                alturaMinima=altura;
-                sexoMin=sexo;
-            }
-            else
-            {
-                alturaMaxMujeres=altura;
-                sexoMax=sexoMujer;
-            }
-        }
-        
-        }
-        if(alturaMaxMujeres=>190)
-        {
-            cantidadMujeres++;
         }
 
-        contador++;
-        sumaPositivos++;
-        contadorPositivo++;
-        respuesta=prompt("Desea ingresar de nuevo?");
+        if(sexo="f" && altura>=190)
+        {
+            alturaMaxMujeres=altura;
+            cantidadMujeres++;
+        }
+        acumulador=acumulador/altura;
         
     }
-    promedio=sumaPositivos/contadorPositivo;
+    promedio=acumulador+altura;
 
     alert("El promedio de las alturas totales " + promedio);
     alert("La altura mas baja" + alturaMinima + " y el sexo es " + sexoMin);
     alert("La cantidad de mujeres que su altura supere los 190 centimetros es de " + cantidadMujeres);
 
-
+}
 
 
 

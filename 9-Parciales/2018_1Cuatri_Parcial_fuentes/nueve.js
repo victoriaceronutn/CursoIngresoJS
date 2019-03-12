@@ -79,6 +79,7 @@ function mostrar()
 
     }
     promedio=sumaPositivos/contadorPositivos;
+    
     document.write("la cantidad de temperaturas pares" + contadorPares);
     document.write("el nombre del pais con menos habitantes" + paisMin);
     document.write("la cantidad de paises que superan los 40 grados : " + contadorMax);
