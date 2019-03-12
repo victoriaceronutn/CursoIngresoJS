@@ -3,7 +3,7 @@ function mostrar()
     var altura =0;
     var sexo =0;
     var contador =0;
-    var promedioAlturas;
+    var promedio;
     var alturaMinima =0;
     var sexoMin =0;
     var alturaMaxMujeres =0;
@@ -11,25 +11,45 @@ function mostrar()
     var sumaAltura =0;
     var contadorAltura =0;
     var cantidadMujeres =0;
-    
+    var sexoMax =0;
+    var sumaNegativos =0;
+    var sumaPositivos =0;
+    var contadorNegativos =0;
+    var contadorPositivos =0;
+    var respuesta ="si";
 
-    while(contador<5)
+
+    while(respuesta!= "no"  && contador<5)
     {
         altura=parseFloat(prompt("Ingrese una altura en cm"));
         while(altura<0 || altura>250 )
         {
-            prompt("ERROR, vuelva a ingresar");
+            altura=prompt("ERROR, vuelva a ingresar");
         }
 
         sexo=prompt("Ingrese un sexo ");
         while(sexo != "f" && sexo != "m")
         {
-            prompt("ERROR, vuelva a ingresar");
+            sexo=prompt("ERROR, vuelva a ingresar");
         }
-        if(contador==0 || altura<alturaMinima)
+
+
+        if(altura>0)
+        {
+            contadorPositivos++;
+            sumaPositivos++;
+        }
+        else
+        {
+            contadorNegativos++;
+            sumaNegativos++;
+        }
+        if(contador==0)
         {
             alturaMinima=altura;
             sexoMin=sexo;
+            alturaMaxMujeres=altura;
+            sexoMax=sexo;
         }
         else
         {
@@ -38,19 +58,13 @@ function mostrar()
                 alturaMinima=altura;
                 sexoMin=sexo;
             }
-        }
-        if(contador==0 || altura>alturaMaxMujeres)
-        {
-            alturaMaxMujeres=altura;
-            sexoMujer= sexo;
-        }
-        else
-        {
-            if(altura>alturaMaxMujeres)
+            else
             {
                 alturaMaxMujeres=altura;
-                sexoMujer=sexo;
+                sexoMax=sexoMujer;
             }
+        }
+        
         }
         if(alturaMaxMujeres=>190)
         {
@@ -58,17 +72,16 @@ function mostrar()
         }
 
         contador++;
-        sumaAltura++;
-        contadorAltura++;
+        sumaPositivos++;
+        contadorPositivo++;
+        respuesta=prompt("Desea ingresar de nuevo?");
         
     }
-    promedioAlturas=sumaAltura/contadorAltura;
+    promedio=sumaPositivos/contadorPositivo;
 
-    alert("El promedio de las alturas totales " + promedioAlturas);
+    alert("El promedio de las alturas totales " + promedio);
     alert("La altura mas baja" + alturaMinima + " y el sexo es " + sexoMin);
     alert("La cantidad de mujeres que su altura supere los 190 centimetros es de " + cantidadMujeres);
-
-
 
 
 
@@ -126,4 +139,4 @@ alert("El promedio final de las notas fue de " + promedioNotas + " puntos ");
 alert("La nota mas baja fue de " + notaMin + " puntos " );
 alert("La cantidad de varones con notas mayores o iguales a 6 fue de " + contadorVarones + " alumnos ");*/
 
-}
+

@@ -5,11 +5,9 @@ function mostrar()
     var ancho;
     var perimetro;
 
-    largo=prompt("Ingrese el largo");
-    ancho=prompt("Ingrese el ancho");
+    largo=parseFloat(prompt("Ingrese el largo"));
+    ancho=parseFloat(prompt("Ingrese el ancho"));
 
-    largo=parseFloat(largo);
-    ancho=parseFloat(ancho);
 
     perimetro=2*(ancho+largo);
 

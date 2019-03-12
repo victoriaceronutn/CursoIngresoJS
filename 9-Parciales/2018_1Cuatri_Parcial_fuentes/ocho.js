@@ -74,6 +74,8 @@ function mostrar()
         }
         
         contador++;
+        sumaNegativos++;
+        sumaPositivos++;
         respuesta= prompt("Desea ingresar otro numero?");
     }
 }

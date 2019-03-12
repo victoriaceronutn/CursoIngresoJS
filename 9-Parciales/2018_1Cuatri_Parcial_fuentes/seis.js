@@ -29,7 +29,7 @@ function mostrar()
         default:
             if(hora>=20 && hora<=24 || hora>=1 && hora<=5)
             {
-                if(hora>5)
+                if(hora>=20 && hora<=24)
                 {
                     alert("A dormir");
                 }
@@ -38,6 +38,9 @@ function mostrar()
             else
             {
                 alert("La hora es incorrecta");
-            }   
+            }
+            
+                
+              
     }
 }
